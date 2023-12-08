@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Timetable Maker🕰️</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Header Section -->
+  <div id="head">
+    <header>
+      <h1>Timetable Maker🕰️</h1>
+    </header>
+
+    <!-- Navigation Section -->
+    <nav id="navigation" style="display: none;">
+      <a href="#createtimetable">Create TimeTable</a>
+      <a href="#showtimetable">Show TimeTables</a>
+      <a href="">Log Out</a>
+    </nav>
+
+    <!-- Content Sections -->
+    <div id="login"></div>
+    <div id="createtimetable" style="display: none;"></div>
+    <div id="showtimetable" style="display: none;"></div>
+  </div>
+
+    <!-- Footer Section -->
+  <footer>
+    <p>&copy; 2023 Keanu Koelewijn. All rights reserved.</p>
+  </footer>
+
+  <!-- JavaScript Imports -->
+  <script src="Login.js"></script>
+  <script type="module" src="createTimeTable.js"></script>
+  <script type="module" src="showTimeTables.js"></script>
+  <script type="module" src="routing.js"></script>
+
+  <!-- Dynamically Add Login Script -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const loginScript = document.createElement('script');
+      loginScript.src = 'Login.js';
+      document.head.appendChild(loginScript);
+    });
+  </script>
+
+</body>
+
+</html>
